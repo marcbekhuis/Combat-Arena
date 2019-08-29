@@ -8,13 +8,16 @@ public class TutorialScript : MonoBehaviour
 {
     public GameObject text1;
     public GameObject text2;
+    public GameObject text3;
+    public GameObject text4;
     public static int text;
 
     // Start is called before the first frame update
     void Awake()
     {
         text2.SetActive(false);
-        text = 0;
+        text3.SetActive(false);
+        text4.SetActive(false);
     }
 
     private void Update()
@@ -31,11 +34,17 @@ public class TutorialScript : MonoBehaviour
             text += 1;
             text2.SetActive(true);
         }
-        /*else if (text == 1)
+        else if (text == 1)
         {
             text2.SetActive(false);
             text = 2;
             text3.SetActive(true);
-        }*/
+        }
+        else if (text == 2)
+        {
+            text3.SetActive(false);
+            text = 3;
+            text4.SetActive(true);
+        }
     }
 }

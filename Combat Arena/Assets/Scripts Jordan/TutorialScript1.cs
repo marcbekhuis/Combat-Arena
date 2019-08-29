@@ -8,17 +8,25 @@ public class TutorialScript1 : MonoBehaviour
 {
     public GameObject text1;
     public GameObject text2;
+    public GameObject text3;
+    public GameObject text4;
 
     public void TutorialBack()
     {
         Debug.Log("buttonpressedBack" + TutorialScript.text);
-        /*if (text == 2)
+        if (TutorialScript.text == 3)
+        {
+            text4.SetActive(false);
+            TutorialScript.text = 2;
+            text3.SetActive(true);
+        }
+        else if (TutorialScript.text == 2)
         {
             text3.SetActive(false);
-            text = 1;
+            TutorialScript.text = 1;
             text2.SetActive(true);
-        }*/
-        if (TutorialScript.text == 1)
+        }
+        else if (TutorialScript.text == 1)
         {
             text2.SetActive(false);
             TutorialScript.text = 0;
