@@ -5,11 +5,22 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
-{ 
+{
     // Update is called once per frame
-    void Update()
+
+    public void startGame()
     {
-        
+        SceneManager.LoadScene("Game");
+    }
+
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void settings()
+    {
+        SceneManager.LoadScene("Settings");
     }
 
     public void Quit ()
