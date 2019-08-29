@@ -24,13 +24,13 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Random.Range(0,50) < 25 && leftArmCooldown <= 0)
             {
-                leftArm.AddTorque(leftArm.transform.rotation * new Vector3(10,0, 0), ForceMode.Impulse);
+                leftArm.AddTorque(leftArm.transform.rotation * new Vector3(-10,0, 0), ForceMode.Impulse);
                 Debug.Log("leftArm");
                 leftArmCooldown = 2;
             }
             else if (rightArmCooldown <= 0)
             {
-                rightArm.AddTorque(rightArm.transform.rotation * new Vector3(10, 0, 0), ForceMode.Impulse);
+                rightArm.AddTorque(rightArm.transform.rotation * new Vector3(-10, 0, 0), ForceMode.Impulse);
                 Debug.Log("RightArm");
                 rightArmCooldown = 2;
             }
