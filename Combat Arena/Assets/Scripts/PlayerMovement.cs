@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     Rigidbody rb;
-    
+    public float speed = 5f;
+    bool onGround = true;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.rotation * new Vector3(Input.GetAxis("Horizontal") * 5, 0, Input.GetAxis("Vertical") * 5);
+        rb.velocity = transform.rotation * new Vector3(Input.GetAxis("Horizontal") * 5, 0, Input.GetAxis("Vertical") * 5) * speed;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (onGround == true)
+            {
+                rb.AddForce(new Vector3(0, 1000, 0), ForceMode.Impulse);
+            }
+            else
+            {
+                rb.AddForce(new Vector3(0, 0, 0), ForceMode.Impulse);
+            }
+        }
     }
 }
