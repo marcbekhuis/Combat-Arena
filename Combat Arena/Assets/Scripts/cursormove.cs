@@ -6,7 +6,10 @@ public class cursormove : MonoBehaviour
 {
     public Rigidbody rb;
     public Rigidbody player;
-
+    [Space]
+    public string Xaxis = "Mouse X";
+    public string Yaxis = "Mouse Y";
+    [Space]
     public bool MoveAllowed;
     public bool cursorvisibility;
     public float Sensitivity;
@@ -27,8 +30,8 @@ public class cursormove : MonoBehaviour
     {
         if (MoveAllowed == true)
         {
-            rotateHor += Sensitivity * Input.GetAxis("Mouse X");
-            rotateVer += Sensitivity * Input.GetAxis("Mouse Y");
+            rotateHor += Sensitivity * Input.GetAxis(Xaxis);
+            rotateVer += Sensitivity * Input.GetAxis(Yaxis);
             Vector3 rotation = new Vector3(rotateHor, rb.transform.position.y, rotateVer);
 
             if (rotateVer >= 80)
