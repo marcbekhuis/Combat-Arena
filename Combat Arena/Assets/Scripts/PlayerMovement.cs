@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public string Xaxis = "HorizontalP1";
+    public string Yaxis = "VerticalP1";
 
     Rigidbody rb;
     
@@ -18,6 +20,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.rotation * new Vector3(Input.GetAxis("Horizontal") * 5, 0, Input.GetAxis("Vertical") * 5);
+        rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * 5, 0, Input.GetAxis(Yaxis) * 5);
     }
 }
