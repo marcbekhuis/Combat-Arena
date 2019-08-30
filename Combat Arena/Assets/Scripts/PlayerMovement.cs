@@ -29,9 +29,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.AddForce(new Vector3(0, 1000, 0), ForceMode.Impulse);
             }
-            else
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if (onGround == true)
             {
-                rb.AddForce(new Vector3(0, 0, 0), ForceMode.Impulse);
+                rb.AddForce(new Vector3(0, -1000, 0), ForceMode.Impulse);
             }
         }
 
