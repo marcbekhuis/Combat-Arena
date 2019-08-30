@@ -190,22 +190,22 @@ PrefabInstance:
     - target: {fileID: 6506261143823793227, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: Xaxis
-      value: HorizontalP2
+      value: HorizontalP1
       objectReference: {fileID: 0}
     - target: {fileID: 6506261143823793227, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: Yaxis
-      value: VerticalP2
+      value: VerticalP1
       objectReference: {fileID: 0}
     - target: {fileID: 4930300387446490091, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: Xaxis
-      value: Joystick X
+      value: Mouse X
       objectReference: {fileID: 0}
     - target: {fileID: 4930300387446490091, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: Yaxis
-      value: Joystick Y
+      value: Mouse Y
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
