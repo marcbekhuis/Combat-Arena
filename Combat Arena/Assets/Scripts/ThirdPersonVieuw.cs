@@ -19,7 +19,7 @@ public class ThirdPersonVieuw : MonoBehaviour
         {
             if (mode == 2)
             {
-                camera.transform.localPosition = new Vector3(0f, 0.5f, 0f);
+                camera.transform.localPosition = new Vector3(0f, 0.5f, 0.171f);
                 camera.transform.localRotation = new Quaternion(0,0,0,0);
                 mode = 0;
             }

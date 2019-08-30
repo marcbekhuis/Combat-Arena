@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
 
     public void startGame()
     {
-        SceneManager.LoadScene("Marc");
+        SceneManager.LoadScene("Remon");
     }
 
     public void Tutorial()
