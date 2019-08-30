@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     public Rigidbody leftArm;
     public Rigidbody rightArm;
+    public KeyCode attack;
 
     float leftArmCooldown = 0;
     float rightArmCooldown = 0;
@@ -20,7 +21,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(attack))
         {
             if (Random.Range(0,50) < 25 && leftArmCooldown <= 0)
             {

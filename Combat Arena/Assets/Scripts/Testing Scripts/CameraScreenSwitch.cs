@@ -12,10 +12,10 @@ public class CameraScreenSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ChangeScreen();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    ChangeScreen();
+        //}
     }
 
     public void ChangeScreen()
@@ -32,5 +32,10 @@ public class CameraScreenSwitch : MonoBehaviour
             cam1.rect = new Rect(0.5f, 0, 0.5f, 1);
             cam2.rect = new Rect(0, 0, 0.5f, 1);
         }
+    }
+
+    private void Start()
+    {
+        ChangeScreen();
     }
 }
