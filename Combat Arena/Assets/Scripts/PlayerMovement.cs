@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     public string Xaxis = "HorizontalP1";
     public string Yaxis = "VerticalP1";
+    public Text coords;
+
+    int mode = 0;
 
     Rigidbody rb;
     public float speed = 5f;
@@ -15,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        coords.gameObject.SetActive(false);
         rb = GetComponent<Rigidbody>();
     }
 
@@ -27,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (onGround == true)
             {
-                rb.AddForce(new Vector3(0, 1000, 0), ForceMode.Impulse);
+                rb.AddForce(new Vector3(0, 2500, 0), ForceMode.Impulse);
                 onGround = false;
             }
         }
@@ -41,5 +46,31 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+
+
+
+    }
+
+    void FixedUpdate()
+    {
+        if (mode == 0)
+        {
+            coords.text = "coords:" + GameObject.Find("Parent Player").transform.position;
+
+
+            mode = 1;
+        }
+        else if (mode == 1)
+        {
+            coords.text = " ";
+
+            mode = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            coords.gameObject.SetActive(true);
+
+        }
     }
 }

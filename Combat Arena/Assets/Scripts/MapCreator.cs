@@ -9,6 +9,8 @@ public class MapCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         GameObject cubes;
         Color color = new Color(
 
@@ -28,6 +30,7 @@ public class MapCreator : MonoBehaviour
 
         );
 
+
         for (int i = 0; i < 40; i++)
         {
 
@@ -38,8 +41,11 @@ public class MapCreator : MonoBehaviour
             cubes.transform.localScale = (new Vector3(Random.Range(5, 10), Random.Range(5, 10), Random.Range(5, 10)));
             cubes.GetComponent<Renderer>().material.color = color;
 
-            plane.GetComponent<Renderer>().material.color = color2;
+            cubes.layer = 8;
+
         }
+
+        plane.GetComponent<Renderer>().material.color = color2;
 
 
     }
