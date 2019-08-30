@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public string Xaxis = "HorizontalP1";
     public string Yaxis = "VerticalP1";
-
+    [Space]
+    public KeyCode jump;
+    [Space]
     Rigidbody rb;
     public float speed = 5f;
     bool onGround = true;
@@ -21,13 +23,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * 5, 0, Input.GetAxis(Yaxis) * 5) * speed;
+        rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * speed, rb.velocity.y, Input.GetAxis(Yaxis) * speed);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(jump))
         {
             if (onGround == true)
             {
-                rb.AddForce(new Vector3(0, 1000, 0), ForceMode.Impulse);
+                rb.AddForce(new Vector3(0, 35, 0), ForceMode.VelocityChange);
                 onGround = false;
             }
         }
