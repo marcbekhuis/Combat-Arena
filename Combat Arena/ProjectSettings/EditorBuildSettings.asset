@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 0b5072a782c8b454e977423e573c7fbc
+  - enabled: 1
+    path: Assets/Scenes/Remon.unity
+    guid: 4d6284f0c7ca73c48b5cc3e62c019fff
+  - enabled: 1
+    path: Assets/Scenes/Jordan.unity
+    guid: 2c0fa9cb250be354fb93aa544a3437d8
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 0f8193b5f5f30364a8e7ea1167a027e9
+  - enabled: 1
+    path: Assets/Scenes/Marc.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: ef6adeb6e6afb76489626231598e3500
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: c87d359705d1f9d4a88ed3aa773216c5
   m_configObjects: {}
