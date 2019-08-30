@@ -5,6 +5,7 @@ using UnityEngine;
 public class ThirdPersonVieuw : MonoBehaviour
 {
     public GameObject camera;
+    public KeyCode switchCameraMode = KeyCode.F5;
     int mode = 0;
     // Start is called before the first frame update
     void Start()

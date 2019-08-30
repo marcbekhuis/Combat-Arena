@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class LoseBodyParts : MonoBehaviour
 {
+    public PlayerCombat Combat;
+
     private void OnCollisionEnter(Collision collision)
     {
         Rigidbody bodyPart;
         if (collision.gameObject.name == "LeftArm" || collision.gameObject.name == "RightArm")
         {
-            if ((bodyPart = collision.gameObject.GetComponent<Rigidbody>()) != null)
+            if ((bodyPart = collision.gameObject.GetComponent<Rigidbody>()) != null && Combat.combat)
             {
-                bodyPart.constraints = RigidbodyConstraints.None;
-                bodyPart.gameObject.transform.parent = null;
+                if (bodyPart.transform.parent != this.transform.parent)
+                {
+                    bodyPart.constraints = RigidbodyConstraints.None;
+                    bodyPart.gameObject.transform.parent = null;
+                }
             }
         }
     }

@@ -860,6 +860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d8904d9bb292bf498d58c0c8d7a41db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Combat: {fileID: 2137747050}
 --- !u!1 &3187631371938346437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1024,7 @@ MonoBehaviour:
   leftArm: {fileID: 2003132590}
   rightArm: {fileID: 520375817}
   attack: 323
+  combat: 0
 --- !u!114 &6506261143823793227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1900852248}
+  switchCameraMode: 286
 --- !u!1 &3187631372149563669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d8904d9bb292bf498d58c0c8d7a41db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Combat: {fileID: 2137747050}
 --- !u!1 &3187631373255949609
 GameObject:
   m_ObjectHideFlags: 0

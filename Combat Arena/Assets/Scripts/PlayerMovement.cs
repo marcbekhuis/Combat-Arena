@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public string Xaxis = "HorizontalP1";
     public string Yaxis = "VerticalP1";
     [Space]
-    public KeyCode jump;
+    public KeyCode jump = KeyCode.Space;
     [Space]
     Rigidbody rb;
     public float speed = 5f;
