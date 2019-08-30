@@ -10,12 +10,16 @@ public class TutorialScript1 : MonoBehaviour
     public GameObject text2;
     public GameObject text3;
     public GameObject text4;
+    public GameObject MenuButton;
+    public GameObject NextButton;
 
     public void TutorialBack()
     {
         Debug.Log("buttonpressedBack" + TutorialScript.text);
         if (TutorialScript.text == 3)
         {
+            MenuButton.SetActive(false);
+            NextButton.SetActive(true);
             text4.SetActive(false);
             TutorialScript.text = 2;
             text3.SetActive(true);

@@ -10,6 +10,9 @@ public class TutorialScript : MonoBehaviour
     public GameObject text2;
     public GameObject text3;
     public GameObject text4;
+
+    public GameObject MenuButton;
+    public GameObject NextButton;
     public static int text;
 
     // Start is called before the first frame update
@@ -18,10 +21,16 @@ public class TutorialScript : MonoBehaviour
         text2.SetActive(false);
         text3.SetActive(false);
         text4.SetActive(false);
+        MenuButton.SetActive(false);
     }
 
     private void Update()
     {
+        if (text == 2)
+        {
+            NextButton.SetActive(true);
+            MenuButton.SetActive(false);
+        }
         Debug.Log(text);
     }
 
@@ -45,6 +54,8 @@ public class TutorialScript : MonoBehaviour
             text3.SetActive(false);
             text = 3;
             text4.SetActive(true);
+            NextButton.SetActive(false);
+            MenuButton.SetActive(true);
         }
     }
 }
