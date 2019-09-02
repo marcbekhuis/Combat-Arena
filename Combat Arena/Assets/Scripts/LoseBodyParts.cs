@@ -16,6 +16,18 @@ public class LoseBodyParts : MonoBehaviour
                 if (bodyPart.transform.parent != this.transform.parent)
                 {
                     bodyPart.constraints = RigidbodyConstraints.None;
+                    PlayerCombat temp;
+                    if ((temp = bodyPart.transform.GetComponentInParent<PlayerCombat>()) != null)
+                    {
+                        if (temp.rightArm == bodyPart)
+                        {
+                            temp.rightArm = null;
+                        }
+                        else if (temp.leftArm == bodyPart)
+                        {
+                            temp.leftArm = null;
+                        }
+                    }
                     bodyPart.gameObject.transform.parent = null;
                 }
             }
