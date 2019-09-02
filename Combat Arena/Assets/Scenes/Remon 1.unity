@@ -314,10 +314,6 @@ PrefabInstance:
       propertyPath: Yaxis
       value: Joystick Y
       objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: switchCameraMode
       value: 333
@@ -413,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam1: {fileID: 2047352568}
   cam2: {fileID: 1785782883}
-  Horizontal: 0
+  Horizontal: 1
 --- !u!1 &760218818
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,14 +922,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 860681647, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: healthscript

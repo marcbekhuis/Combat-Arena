@@ -9,19 +9,26 @@ public class CameraScreenSwitch : MonoBehaviour
 
     public bool Horizontal = false;
 
+    private void Start()
+    {
+        if (HorizontalTrigger.Horizontal == true)
+        {
+            Horizontal = true;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    ChangeScreen();
-        //}
+        Debug.Log(HorizontalTrigger.Horizontal);
+        if (Horizontal)
+        {
+            ChangeScreen();
+        }
     }
 
     public void ChangeScreen()
     {
-        Horizontal = !Horizontal;
-
         if (Horizontal)
         {
             cam1.rect = new Rect(0, 0.5f, 1, 0.5f);
@@ -32,10 +39,5 @@ public class CameraScreenSwitch : MonoBehaviour
             cam1.rect = new Rect(0.5f, 0, 0.5f, 1);
             cam2.rect = new Rect(0, 0, 0.5f, 1);
         }
-    }
-
-    private void Start()
-    {
-        ChangeScreen();
     }
 }
