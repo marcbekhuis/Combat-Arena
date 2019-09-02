@@ -7,7 +7,7 @@ public class ControllerSensitivity : MonoBehaviour
 {
     public Slider ControllerSen;
 
-    public static int ControllerSens;
+    public static int ControllerSens = 1;
 
     // Update is called once per frame
     void Update()
