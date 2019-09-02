@@ -16,7 +16,7 @@ public class ThirdPersonVieuw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F5))
+        if (Input.GetKeyDown(switchCameraMode))
         {
             if (mode == 2)
             {

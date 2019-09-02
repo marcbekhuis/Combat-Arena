@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 6506261143823793227, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: jump
-      value: 335
+      value: 334
       objectReference: {fileID: 0}
     - target: {fileID: 6506261143823793227, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
@@ -215,6 +215,10 @@ PrefabInstance:
         type: 3}
       propertyPath: Yaxis
       value: Joystick Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: switchCameraMode
+      value: 333
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
