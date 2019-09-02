@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * speed, rb.velocity.y, Input.GetAxis(Yaxis) * speed);
 
-        if (Input.GetKeyDown(jump))
+        if (Input.GetKey(jump))
         {
             if (onGround == true)
             {
