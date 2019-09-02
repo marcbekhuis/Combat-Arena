@@ -675,9 +675,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
-    width: 1
+    width: 0.5
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -797,6 +797,7 @@ GameObject:
   - component: {fileID: 2003132590}
   - component: {fileID: 7206892553663187823}
   - component: {fileID: 860681647}
+  - component: {fileID: 1519681755}
   m_Layer: 0
   m_Name: LeftArm
   m_TagString: Untagged
@@ -861,6 +862,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Combat: {fileID: 2137747050}
+  healthscript: {fileID: 0}
+  bodypartSelf: {fileID: 0}
+--- !u!114 &1519681755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187631371729884509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14db5b3f819d9c54da83b1ee3be6b202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  damage: 20
+  playerHealthLose: 1
 --- !u!1 &3187631371938346437
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +984,7 @@ GameObject:
   - component: {fileID: 2137747050}
   - component: {fileID: 6506261143823793227}
   - component: {fileID: 1765151449}
+  - component: {fileID: 45571268}
   m_Layer: 0
   m_Name: Parent Player
   m_TagString: Untagged
@@ -1055,6 +1074,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1900852248}
   switchCameraMode: 286
+--- !u!114 &45571268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187631372014352157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8aa24ccc3fe0c54f8cbddb48d8a709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  HealthText: {fileID: 0}
+  gameover: {fileID: 0}
+  player: Player 2
 --- !u!1 &3187631372149563669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1379,7 @@ GameObject:
   - component: {fileID: 520375817}
   - component: {fileID: 4013339309241584274}
   - component: {fileID: 1900348804}
+  - component: {fileID: 188461928}
   m_Layer: 0
   m_Name: RightArm
   m_TagString: Untagged
@@ -1408,6 +1444,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Combat: {fileID: 2137747050}
+  healthscript: {fileID: 0}
+  bodypartSelf: {fileID: 0}
+--- !u!114 &188461928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187631373243417909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14db5b3f819d9c54da83b1ee3be6b202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  damage: 20
+  playerHealthLose: 1
 --- !u!1 &3187631373255949609
 GameObject:
   m_ObjectHideFlags: 0

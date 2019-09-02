@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: switchCameraMode
       value: 333
       objectReference: {fileID: 0}
+    - target: {fileID: 1900348804, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: bodypartSelf
+      value: 
+      objectReference: {fileID: 736824099}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
 --- !u!1 &509202694
@@ -256,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Combat: {fileID: 0}
   healthscript: {fileID: 0}
+  bodypartSelf: {fileID: 0}
 --- !u!114 &509202696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,6 +399,27 @@ MonoBehaviour:
   cam1: {fileID: 2047352568}
   cam2: {fileID: 1785782883}
   Horizontal: 1
+--- !u!1 &736824094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3187631373243417909, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 350473375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &736824099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736824094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14db5b3f819d9c54da83b1ee3be6b202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  damage: 20
+  playerHealthLose: 1
 --- !u!1 &798393641
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +527,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &901697109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3187631371729884509, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 350473375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &901697114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901697109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14db5b3f819d9c54da83b1ee3be6b202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  damage: 20
+  playerHealthLose: 1
 --- !u!1 &1146711294
 GameObject:
   m_ObjectHideFlags: 0

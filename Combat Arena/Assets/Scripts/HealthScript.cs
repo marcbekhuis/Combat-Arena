@@ -6,28 +6,34 @@ using UnityEngine.UI;
 public class HealthScript : MonoBehaviour
 {
 
-    int health = 1000;
+    public int health = 1000;
     public Text HealthText;
+    public GameObject gameover;
+    public string player;
 
     void Start()
     {
-        HealthText.text = "Health:" + health;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        healthfunction();
+        HealthText.text = "Health: " + health;
     }
 
     public void healthfunction()
     {
-        HealthText.text = "Health:" + health;
+        HealthText.text = "Health: " + health;
         
     }
-    public void healthloss()
+    public void healthlose(int damage)
     {
-        health -= 100;
+        health -= damage;
         healthfunction();
+        if (health == 0)
+        {
+            Gameover();
+        }
+    }
+
+    void Gameover()
+    {
+        gameover.SetActive(true);
+        gameover.GetComponentInChildren<Text>().text = "Gameover\n" + player + " Won!";
     }
 }
