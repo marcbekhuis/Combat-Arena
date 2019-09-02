@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 6506261143823793227}
   - component: {fileID: 1765151449}
   - component: {fileID: 45571268}
+  - component: {fileID: 4534232233879439356}
   m_Layer: 0
   m_Name: Parent Player
   m_TagString: Untagged
@@ -1090,6 +1091,20 @@ MonoBehaviour:
   HealthText: {fileID: 0}
   gameover: {fileID: 0}
   player: Player 2
+--- !u!114 &4534232233879439356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187631372014352157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fac7edb21f20b41bcf1f40bffce83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 27
+  canvas: {fileID: 0}
 --- !u!1 &3187631372149563669
 GameObject:
   m_ObjectHideFlags: 0
