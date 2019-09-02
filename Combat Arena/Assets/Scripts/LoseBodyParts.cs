@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoseBodyParts : MonoBehaviour
 {
     public PlayerCombat Combat;
+    public HealthScript healthscript;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,6 +18,8 @@ public class LoseBodyParts : MonoBehaviour
                 {
                     bodyPart.constraints = RigidbodyConstraints.None;
                     bodyPart.gameObject.transform.parent = null;
+
+                    healthscript.healthloss();
                 }
             }
         }

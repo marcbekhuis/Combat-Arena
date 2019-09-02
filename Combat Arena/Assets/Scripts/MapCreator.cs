@@ -5,7 +5,6 @@ using UnityEngine;
 public class MapCreator : MonoBehaviour
 {
     public GameObject plane;
-    int walls = 10;
     // Start is called before the first frame update
     void Start()
     {
