@@ -31,7 +31,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
-    void Gameover()
+    public void Gameover()
     {
         gameover.SetActive(true);
         gameover.GetComponentInChildren<Text>().text = "Gameover\n" + player + " Won!";
