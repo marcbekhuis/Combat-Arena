@@ -278,6 +278,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2137747050, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: attack
+      value: 335
+      objectReference: {fileID: 0}
     - target: {fileID: 6506261143823793227, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: jump
@@ -303,14 +307,6 @@ PrefabInstance:
       propertyPath: Yaxis
       value: Joystick Y
       objectReference: {fileID: 0}
-    - target: {fileID: 2137747050, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: attack
-      value: 335
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: switchCameraMode
-      value: 333
-      objectReference: {fileID: 0}
     - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
@@ -318,6 +314,10 @@ PrefabInstance:
     - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: switchCameraMode
+      value: 333
       objectReference: {fileID: 0}
     - target: {fileID: 860681647, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: healthscript
@@ -949,6 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526471822}
   - component: {fileID: 1526471821}
+  - component: {fileID: 1526471823}
   m_Layer: 0
   m_Name: mapcreator
   m_TagString: Untagged
@@ -963,7 +964,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526471820}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50dd2ee4254575c4bb2b1866274fa5dc, type: 3}
   m_Name: 
@@ -983,6 +984,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526471823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526471820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569771e14cc48944e8d866e710b35d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trees: {fileID: 4297005657123536864, guid: 630dd824ebbca584dbd0e6319e4fa4b6, type: 3}
 --- !u!20 &1785782883 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
@@ -1001,14 +1015,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parent Player
       objectReference: {fileID: 0}
-    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: HealthText
-      value: 
-      objectReference: {fileID: 1852264232}
-    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: gameover
-      value: 
-      objectReference: {fileID: 372588826}
     - target: {fileID: 3187631372014352130, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1072,6 +1078,14 @@ PrefabInstance:
       propertyPath: healthscript
       value: 
       objectReference: {fileID: 1994806094}
+    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: HealthText
+      value: 
+      objectReference: {fileID: 1852264232}
+    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: gameover
+      value: 
+      objectReference: {fileID: 372588826}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
 --- !u!1 &1852264230
