@@ -10,28 +10,31 @@ public class LoseBodyParts : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Rigidbody bodyPart;
-        if (collision.gameObject.name == "LeftArm" || collision.gameObject.name == "RightArm")
+        if (Combat != null)
         {
-            if ((bodyPart = collision.gameObject.GetComponent<Rigidbody>()) != null && Combat.combat)
+            if (collision.gameObject.name == "LeftArm" || collision.gameObject.name == "RightArm")
             {
-                if (bodyPart.transform.parent != this.transform.parent)
+                if ((bodyPart = collision.gameObject.GetComponent<Rigidbody>()) != null && Combat.combat)
                 {
-                    bodyPart.constraints = RigidbodyConstraints.None;
-                    PlayerCombat temp;
-                    if ((temp = bodyPart.transform.GetComponentInParent<PlayerCombat>()) != null)
+                    if (bodyPart.transform.parent != this.transform.parent)
                     {
-                        if (temp.rightArm == bodyPart)
+                        bodyPart.constraints = RigidbodyConstraints.None;
+                        PlayerCombat temp;
+                        if ((temp = bodyPart.transform.GetComponentInParent<PlayerCombat>()) != null)
                         {
-                            temp.rightArm = null;
+                            if (temp.rightArm == bodyPart)
+                            {
+                                temp.rightArm = null;
+                            }
+                            else if (temp.leftArm == bodyPart)
+                            {
+                                temp.leftArm = null;
+                            }
                         }
-                        else if (temp.leftArm == bodyPart)
-                        {
-                            temp.leftArm = null;
-                        }
-                    }
-                    bodyPart.gameObject.transform.parent = null;
+                        bodyPart.gameObject.transform.parent = null;
 
-                    healthscript.healthloss();
+                        healthscript.healthloss();
+                    }
                 }
             }
         }
