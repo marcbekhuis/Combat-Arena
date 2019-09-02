@@ -7,7 +7,7 @@ public class MouseSensitivity : MonoBehaviour
 {
     public Slider MouseSen;
 
-    public static int MouseSens;
+    public static int MouseSens = 1;
 
     // Update is called once per frame
     void Update()
