@@ -12,11 +12,14 @@ public class LoseBodyParts : MonoBehaviour
     {
         bodypartSelf = GetComponent<Bodypart>();
         HealthScript[] healthScripts = FindObjectsOfType<HealthScript>();
-        foreach (var healthScript in healthScripts)
+        if (GetComponent<BodyPartPickup>() == null)
         {
-            if (healthScript.transform.parent != Combat.transform.parent)
+            foreach (var healthScript in healthScripts)
             {
-                healthscript = healthScript;
+                if (healthScript.transform.parent != Combat.transform.parent)
+                {
+                    healthscript = healthScript;
+                }
             }
         }
     }
@@ -70,7 +73,6 @@ public class LoseBodyParts : MonoBehaviour
                         bodypartEnemy.health -= bodypartSelf.damage;
                     }
                 }
-                healthscript.healthlose(bodypartSelf.damage);
             }
         }
     }
