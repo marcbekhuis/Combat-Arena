@@ -23,6 +23,8 @@ public class cursormove : MonoBehaviour
         {
             Cursor.visible = false;
         }
+        rotateHor = player.transform.localRotation.x;
+        rotateVer = player.transform.localRotation.z;
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class cursormove : MonoBehaviour
         {
             rotateHor += Sensitivity * Input.GetAxis(Xaxis);
             rotateVer += Sensitivity * Input.GetAxis(Yaxis);
-            Vector3 rotation = new Vector3(rotateHor, rb.transform.position.y, rotateVer);
+            Vector3 rotation = new Vector3(rotateHor, rb.transform.rotation.y, rotateVer);
 
             if (rotateVer >= 80)
             {
