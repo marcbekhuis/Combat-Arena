@@ -8,19 +8,9 @@ public class SceneLoader : MonoBehaviour
 {
     // Update is called once per frame
 
-    public void startGame()
+    public void LoadScene(string scene)
     {
-        SceneManager.LoadScene("Remon 1");
-    }
-
-    public void Tutorial()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
-
-    public void settings()
-    {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene(scene);
     }
 
     public void Quit ()

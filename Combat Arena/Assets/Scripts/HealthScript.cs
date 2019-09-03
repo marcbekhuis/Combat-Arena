@@ -35,5 +35,6 @@ public class HealthScript : MonoBehaviour
     {
         gameover.SetActive(true);
         gameover.GetComponentInChildren<Text>().text = "Gameover\n" + player + " Won!";
+        Cursor.visible = true;
     }
 }
