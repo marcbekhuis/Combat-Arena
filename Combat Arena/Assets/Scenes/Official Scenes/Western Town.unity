@@ -3977,13 +3977,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: gameover
-      value: 
-      objectReference: {fileID: 1102392749}
-    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 95380574}
+    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: gameover
+      value: 
+      objectReference: {fileID: 1102392749}
     - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: canvas
