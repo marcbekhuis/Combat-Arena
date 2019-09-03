@@ -18,7 +18,7 @@ public class Mapcreate : MonoBehaviour
         }
         trees.AddComponent<Rigidbody>();
         trees.AddComponent<BoxCollider>();
-        trees.GetComponent<Rigidbody>.
+       
     }
     // Update is called once per frame
     void Update()
