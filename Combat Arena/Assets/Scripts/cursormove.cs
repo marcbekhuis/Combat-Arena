@@ -19,7 +19,7 @@ public class cursormove : MonoBehaviour
     private void Start()
     {
         MoveAllowed = true;
-        if (cursorvisibility == false)
+        if (!cursorvisibility)
         {
             Cursor.visible = false;
         }
@@ -30,7 +30,6 @@ public class cursormove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetAxis(Xaxis));
         if (MoveAllowed == true)
         {
             rotateHor += Sensitivity * Input.GetAxis(Xaxis);

@@ -10,10 +10,12 @@ public class HealthScript : MonoBehaviour
     public Text HealthText;
     public GameObject gameover;
     public string player;
+    static bool gameEnd = false;
 
     void Start()
     {
         HealthText.text = "Health: " + health;
+        gameEnd = false;
     }
 
     public void healthfunction()
@@ -25,7 +27,7 @@ public class HealthScript : MonoBehaviour
     {
         health -= damage;
         healthfunction();
-        if (health == 0)
+        if (health <= 0)
         {
             Gameover();
         }
@@ -33,8 +35,12 @@ public class HealthScript : MonoBehaviour
 
     public void Gameover()
     {
-        gameover.SetActive(true);
-        gameover.GetComponentInChildren<Text>().text = "Gameover\n" + player + " Won!";
-        Cursor.visible = true;
+        if (!gameEnd)
+        {
+            gameover.SetActive(true);
+            gameover.GetComponentInChildren<Text>().text = "Gameover\n" + player + " Won!";
+            Cursor.visible = true;
+            gameEnd = true;
+        }
     }
 }

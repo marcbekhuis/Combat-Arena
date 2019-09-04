@@ -13708,6 +13708,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3895967044250914236, guid: b76ebefdd1f64dc428596cb2a8c2f9ed,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Western_Town
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b76ebefdd1f64dc428596cb2a8c2f9ed, type: 3}
 --- !u!1 &1541404441 stripped
@@ -16198,6 +16203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1900852249, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+    - {fileID: 8613569755137976026, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
 --- !u!1 &1839352768
 GameObject:
