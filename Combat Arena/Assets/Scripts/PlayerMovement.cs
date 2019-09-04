@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (onGround == true)
             {
-                rb.AddForce(new Vector3(0, 35, 0), ForceMode.VelocityChange);
+                rb.AddForce(new Vector3(0, 40, 0), ForceMode.VelocityChange);
                 onGround = false;
                 jumpCooldown = 0.3f;
             }
