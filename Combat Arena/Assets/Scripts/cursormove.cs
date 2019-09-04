@@ -31,7 +31,7 @@ public class cursormove : MonoBehaviour
     void Update()
     {
         Debug.Log(Input.GetAxis(Xaxis));
-        if (MoveAllowed == true && (Input.GetAxis(Xaxis) ==0 || Input.GetAxis(Yaxis)==0))
+        if (MoveAllowed == true)
         {
             rotateHor += Sensitivity * Input.GetAxis(Xaxis);
             rotateVer += Sensitivity * Input.GetAxis(Yaxis);
