@@ -30,7 +30,8 @@ public class cursormove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MoveAllowed == true)
+        Debug.Log(Input.GetAxis(Xaxis));
+        if (MoveAllowed == true && (Input.GetAxis(Xaxis) ==0 || Input.GetAxis(Yaxis)==0))
         {
             rotateHor += Sensitivity * Input.GetAxis(Xaxis);
             rotateVer += Sensitivity * Input.GetAxis(Yaxis);

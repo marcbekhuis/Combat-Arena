@@ -14,7 +14,7 @@ public class SensControler : MonoBehaviour
     void Update()
     {
         cursemovescript.Sensitivity = MouseSensitivity.MouseSens;
-        Debug.Log(MouseSensitivity.MouseSens);
-        Debug.Log(cursemovescript.Sensitivity);
+       // Debug.Log(MouseSensitivity.MouseSens);
+      //  Debug.Log(cursemovescript.Sensitivity);
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement1 : MonoBehaviour
 {
     public string Xaxis = "HorizontalP1";
     public string Yaxis = "VerticalP1";
@@ -30,13 +30,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (onGround == true)
             {
-                rb.AddForce(new Vector3(0, 40, 0), ForceMode.VelocityChange);
+                rb.AddForce(new Vector3(0, 35, 0), ForceMode.VelocityChange);
                 onGround = false;
                 jumpCooldown = 0.3f;
             }
         }
         onGround = Physics.CheckBox(this.transform.position - new Vector3(0, 1.6f, 0), new Vector3(0.45f, 0.01f, 0.2f), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid"));
         jumpCooldown -= Time.deltaTime;
-
     }
 }
