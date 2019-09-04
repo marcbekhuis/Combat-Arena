@@ -75,7 +75,7 @@ public class LoseBodyParts : MonoBehaviour
                         bodypartEnemy.health -= bodypartSelf.damage;
                     }
                 }
-                healthscript.health -= bodypartSelf.damage;
+                healthscript.healthlose(bodypartSelf.damage);
                 punchSource.Play();
             }
         }
