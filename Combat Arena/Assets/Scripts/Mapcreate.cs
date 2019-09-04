@@ -16,8 +16,6 @@ public class Mapcreate : MonoBehaviour
             Instantiate(trees, new Vector3(Random.Range(-50f, 50), 7.41f, Random.Range(-50f, 50)), new Quaternion(0, 0, 0, 0));
             
         }
-        trees.AddComponent<Rigidbody>();
-        trees.AddComponent<BoxCollider>();
        
     }
     // Update is called once per frame
