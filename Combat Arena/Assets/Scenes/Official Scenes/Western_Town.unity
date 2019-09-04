@@ -16064,7 +16064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2137747050, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: attack
-      value: 334
+      value: 335
       objectReference: {fileID: 0}
     - target: {fileID: 6506261143823793227, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
@@ -16079,7 +16079,7 @@ PrefabInstance:
     - target: {fileID: 6506261143823793227, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: jump
-      value: 335
+      value: 334
       objectReference: {fileID: 0}
     - target: {fileID: 4930300387446490091, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
@@ -16097,7 +16097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: switchCameraMode
-      value: 330
+      value: 333
       objectReference: {fileID: 0}
     - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
