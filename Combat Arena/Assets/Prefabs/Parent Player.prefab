@@ -1255,7 +1255,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3187631372545288221}
-  - component: {fileID: 972099250}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -1278,19 +1277,6 @@ Transform:
   m_Father: {fileID: 3187631372014352130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &972099250
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3187631372545288220}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.5976086, z: 0.32217148}
-  m_Center: {x: 6.4760003e-13, y: -0.029277802, z: 0.007303968}
 --- !u!1 &3187631372771892113
 GameObject:
   m_ObjectHideFlags: 0
