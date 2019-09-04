@@ -835,7 +835,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 110
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7206892553663187823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,6 +987,7 @@ GameObject:
   - component: {fileID: 1765151449}
   - component: {fileID: 45571268}
   - component: {fileID: 4534232233879439356}
+  - component: {fileID: 8613569755137976026}
   m_Layer: 0
   m_Name: Parent Player
   m_TagString: Untagged
@@ -1106,6 +1107,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: 27
   canvas: {fileID: 0}
+--- !u!114 &8613569755137976026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187631372014352157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8aa24ccc3fe0c54f8cbddb48d8a709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  HealthText: {fileID: 0}
+  gameover: {fileID: 0}
+  player: 
 --- !u!1 &3187631372149563669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3187631372545288221}
+  - component: {fileID: 972099250}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -1260,6 +1278,19 @@ Transform:
   m_Father: {fileID: 3187631372014352130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &972099250
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187631372545288220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5976086, z: 0.32217148}
+  m_Center: {x: 6.4760003e-13, y: -0.029277802, z: 0.007303968}
 --- !u!1 &3187631372771892113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1561,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 110
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &4013339309241584274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,6 +1990,7 @@ GameObject:
   - component: {fileID: 3187631373748888652}
   - component: {fileID: 4930300387446490091}
   - component: {fileID: 713828177}
+  - component: {fileID: 1824480939}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -2025,3 +2057,15 @@ MonoBehaviour:
   health: 50
   damage: 0
   playerHealthLose: 1
+--- !u!114 &1824480939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187631373748888655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9260b75553fc8df4d93c3af1adb49486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

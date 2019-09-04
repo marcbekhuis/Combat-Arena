@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Remon 1.unity
     guid: afec530cb76ae364ba0b4f5b31a131b6
+  - enabled: 1
+    path: Assets/Scenes/Official Scenes/Mountain.unity
+    guid: e2633c82cdc5daf42862235029582b4f
   m_configObjects: {}
