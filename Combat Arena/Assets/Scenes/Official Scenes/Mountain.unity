@@ -5713,6 +5713,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2117711105}
+    - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+        type: 3}
+      propertyPath: input
+      value: 331
+      objectReference: {fileID: 0}
     - target: {fileID: 2137747050, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: attack
       value: 335
@@ -5762,16 +5772,6 @@ PrefabInstance:
       propertyPath: healthscript
       value: 
       objectReference: {fileID: 45571268}
-    - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-        type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 2117711105}
-    - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-        type: 3}
-      propertyPath: input
-      value: 331
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
     - {fileID: 713828176, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
@@ -6177,6 +6177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855893703913480825, guid: bdcbc31e3408abf4cb310c536f05cebe,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Mountain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdcbc31e3408abf4cb310c536f05cebe, type: 3}
@@ -24103,6 +24108,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2117711105}
     - target: {fileID: 860681647, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: healthscript
       value: 
@@ -24111,11 +24121,6 @@ PrefabInstance:
       propertyPath: healthscript
       value: 
       objectReference: {fileID: 1994806094}
-    - target: {fileID: 4534232233879439356, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-        type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 2117711105}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
 --- !u!1 &1824770321
@@ -28635,6 +28640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895967044250914236, guid: b76ebefdd1f64dc428596cb2a8c2f9ed,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Mountain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b76ebefdd1f64dc428596cb2a8c2f9ed, type: 3}
