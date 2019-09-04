@@ -13,10 +13,11 @@ public class ArmSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int x = 0; x < amount;)
+        int y = 0;
+        for (int x = 0; x < amount && y < amount * 20; y++)
         {
             Vector3 location = new Vector3(Random.Range(-500, 500), transform.position.y, Random.Range(-500, 500));
-            if (!Physics.CheckBox(location,new Vector3(1,1,1),new Quaternion(0,0,0,0), 1 << LayerMask.NameToLayer("Solid")) && Physics.CheckBox(location - new Vector3(0,2,0) , new Vector3(1, 1f, 1), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")) )
+            if (!Physics.CheckBox(location,new Vector3(1,1,1),new Quaternion(0,0,0,0), 1 << LayerMask.NameToLayer("Solid")) && Physics.CheckBox(location - new Vector3(0,4,0) , new Vector3(1, 3, 1), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")) )
             {
                 int randomInt = Random.Range(0,100);
                 if (randomInt < 60)
