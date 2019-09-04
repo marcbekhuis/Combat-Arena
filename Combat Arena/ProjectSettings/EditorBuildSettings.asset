@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/Official Scenes/Main Menu.unity
     guid: 0b5072a782c8b454e977423e573c7fbc
   - enabled: 1
     path: Assets/Scenes/Remon.unity
@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Remon 1.unity
     guid: afec530cb76ae364ba0b4f5b31a131b6
+  - enabled: 1
+    path: Assets/Scenes/Official Scenes/Mountain.unity
+    guid: e2633c82cdc5daf42862235029582b4f
+  - enabled: 1
+    path: Assets/Scenes/Official Scenes/Western_Town.unity
+    guid: b43e9891465c4fb44a0ad55d8d7a0e64
+  - enabled: 1
+    path: Assets/Scenes/Official Scenes/Forest.unity
+    guid: 8e3e0ff2f5f80444eaf946dae61ec71b
   m_configObjects: {}
