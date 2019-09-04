@@ -5,18 +5,20 @@ using UnityEngine;
 public class LoseBodyParts : MonoBehaviour
 {
     public PlayerCombat Combat;
-    public HealthScript healthscript;
     public Bodypart bodypartSelf;
+    public AudioSource punchSource;
+    [Space]
+    public HealthScript healthscript;
 
     private void Start()
     {
         bodypartSelf = GetComponent<Bodypart>();
         HealthScript[] healthScripts = FindObjectsOfType<HealthScript>();
-        if (GetComponent<BodyPartPickup>() == null)
+        if (this.GetComponent<BodyPartPickup>() == null)
         {
             foreach (var healthScript in healthScripts)
             {
-                if (healthScript.transform.parent != Combat.transform.parent)
+                if (healthScript.transform != Combat.transform)
                 {
                     healthscript = healthScript;
                 }
@@ -73,6 +75,8 @@ public class LoseBodyParts : MonoBehaviour
                         bodypartEnemy.health -= bodypartSelf.damage;
                     }
                 }
+                healthscript.health -= bodypartSelf.damage;
+                punchSource.Play();
             }
         }
     }
