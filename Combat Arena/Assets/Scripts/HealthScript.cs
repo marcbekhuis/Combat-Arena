@@ -25,7 +25,7 @@ public class HealthScript : MonoBehaviour
     }
     public void healthlose(int damage)
     {
-        health -= damage;
+        health = Mathf.Clamp(health - damage, 0, 1000);
         healthfunction();
         if (health <= 0)
         {
@@ -42,5 +42,11 @@ public class HealthScript : MonoBehaviour
             Cursor.visible = true;
             gameEnd = true;
         }
+    }
+
+    public void Heal(int regen)
+    {
+        health = Mathf.Clamp(health + regen,0,1000);
+        healthfunction();
     }
 }

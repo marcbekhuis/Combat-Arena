@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VoidScript : MonoBehaviour
+public class MedPack : MonoBehaviour
 {
-    public HealthScript health;
+    HealthScript health;
+    public MedPackSpawner medPackSpawner;
 
     void OnTriggerEnter(Collider other)
     {
         if ((health = other.gameObject.GetComponentInParent<HealthScript>()) != null)
         {
-            health.Gameover();
+            health.Heal(100);
+            medPackSpawner.medPacksSpawned--;
+            Destroy(this.gameObject);
         }
     }
 }
