@@ -22,7 +22,7 @@ public class cursormove : MonoBehaviour
         {
             Cursor.visible = false;
         }
-        rotateHor = player.transform.rotation.y;
+        rotateHor = player.transform.eulerAngles.y;
     }
 
     // Update is called once per frame
