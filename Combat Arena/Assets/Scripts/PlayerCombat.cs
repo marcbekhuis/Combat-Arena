@@ -39,7 +39,7 @@ public class PlayerCombat : MonoBehaviour
                 combat = true;
             }
         }
-        if (combat == true && (rightArmCooldown <= 0.2 || leftArmCooldown <= 0.2))
+        if (combat == true && (rightArmCooldown <= 0.05f && leftArmCooldown <= 0.05f))
         {
             combat = false;
         }
