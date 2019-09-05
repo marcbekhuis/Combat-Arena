@@ -8,7 +8,8 @@ public class VoidScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if ((health = other.gameObject.GetComponent<HealthScript>()) != null)
+        Debug.Log(other.gameObject.name);
+        if ((health = other.gameObject.GetComponentInParent<HealthScript>()) != null)
         {
             health.Gameover();
         }
