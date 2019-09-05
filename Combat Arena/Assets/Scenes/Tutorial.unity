@@ -378,8 +378,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: When you punch your opponent, there's a chance his arm or leg may get detached.
-    When this happends he is able to pick up cyborg parts
+  m_Text: When you punch your opponent, There is a chance his or her arms falls of.
+    When this happends he or she can pickup cyborg arms
 --- !u!222 &490674113
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -458,8 +458,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Speler 1 speelt met de toetsen bord en muis. Hij/Zij kan slaan met linker
-    muis button en loopt met W A S D
+  m_Text: Player 1 uses the keyboard and mouse. Use WASD to move and mouse to look
+    aroind. Left click to punch and Spacebar to jump
 --- !u!222 &675899799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -538,8 +538,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Speler 2 speelt op een controller. Hij/zij gebruikt de joystick om te bewegen
-    en de linker of rechter trigger om te slaan.
+  m_Text: Player 2 uses the left joystick to walk and right joystick to look around.
+    Press RB to punch and LB to jump
 --- !u!222 &718093676
 CanvasRenderer:
   m_ObjectHideFlags: 0
