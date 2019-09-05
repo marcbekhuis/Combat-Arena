@@ -3991,6 +3991,12 @@ PrefabInstance:
       objectReference: {fileID: 1541404441}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+--- !u!20 &399721977 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 399721976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413886440
 GameObject:
   m_ObjectHideFlags: 0
@@ -7175,6 +7181,7 @@ GameObject:
   - component: {fileID: 742406131}
   - component: {fileID: 742406130}
   - component: {fileID: 742406129}
+  - component: {fileID: 742406132}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7230,6 +7237,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742406132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742406128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463e8f0dfac64694eb74bee379311232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam1: {fileID: 399721977}
+  cam2: {fileID: 1838492816}
+  Horizontal: 0
 --- !u!1 &743150002
 GameObject:
   m_ObjectHideFlags: 0
@@ -11334,7 +11356,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170268593}
-  m_Material: {fileID: 13400000, guid: 9ec0a678b11f8024ebd4f00210cba4ff, type: 2}
+  m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: e9b032eff06663f409b61846847e0a5e, type: 2}
   m_EnableTreeColliders: 1
@@ -16307,6 +16329,12 @@ PrefabInstance:
     - {fileID: 1900852249, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
     - {fileID: 8613569755137976026, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+--- !u!20 &1838492816 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1838492815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839352768
 GameObject:
   m_ObjectHideFlags: 0
@@ -18633,7 +18661,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002451541}
-  m_Material: {fileID: 13400000, guid: 9ec0a678b11f8024ebd4f00210cba4ff, type: 2}
+  m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 539d351cda1f36d418794c2f184a36a6, type: 2}
   m_EnableTreeColliders: 1
