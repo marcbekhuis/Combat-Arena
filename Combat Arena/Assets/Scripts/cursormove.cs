@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class cursormove : MonoBehaviour
 {
-    public Rigidbody rb;
     public Rigidbody player;
     [Space]
     public string Xaxis = "Mouse X";
@@ -23,8 +22,7 @@ public class cursormove : MonoBehaviour
         {
             Cursor.visible = false;
         }
-        rotateHor = player.transform.localRotation.x;
-        rotateVer = player.transform.localRotation.z;
+        rotateHor = player.transform.rotation.y;
     }
 
     // Update is called once per frame
@@ -34,18 +32,15 @@ public class cursormove : MonoBehaviour
         {
             rotateHor += Sensitivity * Input.GetAxis(Xaxis);
             rotateVer += Sensitivity * Input.GetAxis(Yaxis);
-            Vector3 rotation = new Vector3(rotateHor, rb.transform.rotation.y, rotateVer);
 
             if (rotateVer >= 80)
             {
                 rotateVer = 80;
             }
-
-            if (rotateVer <= -80)
+            else if (rotateVer <= -80)
             {
                 rotateVer = -80;
             }
-
 
             player.transform.eulerAngles = new Vector3(0, rotateHor, 0);
             transform.eulerAngles = new Vector3(-rotateVer, rotateHor, 0);
