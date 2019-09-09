@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(run))
         {
-            rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * walkSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * runSpeed);
+            rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * runSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * runSpeed);
         }
         else
         {
