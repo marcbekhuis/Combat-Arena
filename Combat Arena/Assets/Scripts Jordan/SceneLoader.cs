@@ -10,11 +10,13 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string scene)
     {
+        // when pressed a button, it will change scene based on what the unity button has been assigned to
         SceneManager.LoadScene(scene);
     }
 
     public void Quit ()
     {
+        // closes the game
         Application.Quit();
     }
 }

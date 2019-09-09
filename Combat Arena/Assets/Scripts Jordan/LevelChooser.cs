@@ -20,6 +20,7 @@ public class LevelChooser : MonoBehaviour
 
     private void Start()
     {
+        // Make the text not visable for the time being
         text1.SetActive(false);
         Forest.SetActive(false);
         Western.SetActive(false);
@@ -33,6 +34,7 @@ public class LevelChooser : MonoBehaviour
     {
         if (process == 1)
         {
+            // disables & makes the buttons/text invisable and shows the level buttons
             text1.SetActive(true);
             Forest.SetActive(true);
             Western.SetActive(true);
@@ -47,6 +49,7 @@ public class LevelChooser : MonoBehaviour
         }
         else
         {
+            // enables & makes the buttons/text visable again and makes the level buttons disappear
             text1.SetActive(false);
             Forest.SetActive(false);
             Western.SetActive(false);
