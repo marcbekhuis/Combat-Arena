@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ThrowObjects : MonoBehaviour
 {
-    public Transform player;
-    public Transform playerCamera;
+    public Transform[] players;
+    public Transform[] playerCameras;
     public float throwingforce;
     bool hasPlayer = false;
     bool IsCarrying = false;
@@ -15,46 +15,49 @@ public class ThrowObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(gameObject.transform.position, player.position);
+        for (int x = 0; x < players.Length; x++)
+        {
+            float distance = Vector3.Distance(gameObject.transform.position, players[x].position);
 
-        if (distance <= 2.0f)
-        {
-            hasPlayer = true;
-        }
-        else
-        {
-            hasPlayer = false;
-        }
-        if (hasPlayer && Input.GetButtonDown("Use"))
-        {
-            GetComponent<Rigidbody>().isKinematic = true;
-            transform.parent = playerCamera;
-            IsCarrying = true;
-        }
-        if (IsCarrying == true)
-        {
-            if (touch)
+            if (distance <= 2.0f)
             {
-                GetComponent<Rigidbody>().isKinematic = false;
-                transform.parent = null;
-                IsCarrying = false;
-                touch = false;
+                hasPlayer = true;
             }
-            if (Input.GetMouseButtonDown(0))
+            else
             {
-                GetComponent<Rigidbody>().isKinematic = false;
-                transform.parent = null;
-                IsCarrying = false;
-                GetComponent<Rigidbody>().AddForce(playerCamera.forward * Random.Range(400, 900));
+                hasPlayer = false;
             }
-            else if (Input.GetMouseButtonDown(1))
+            if (hasPlayer && Input.GetButtonDown("Use"))
             {
-                GetComponent<Rigidbody>().isKinematic = false;
-                transform.parent = null;
-                IsCarrying = false;
+                GetComponent<Rigidbody>().isKinematic = true;
+                transform.parent = playerCameras[x];
+                IsCarrying = true;
             }
+            if (IsCarrying == true)
+            {
+                if (touch)
+                {
+                    GetComponent<Rigidbody>().isKinematic = false;
+                    transform.parent = null;
+                    IsCarrying = false;
+                    touch = false;
+                }
+                if (Input.GetMouseButtonDown(0))
+                {
+                    GetComponent<Rigidbody>().isKinematic = false;
+                    transform.parent = null;
+                    IsCarrying = false;
+                    GetComponent<Rigidbody>().AddForce(playerCameras[x].forward * Random.Range(400, 900));
+                }
+                else if (Input.GetMouseButtonDown(1))
+                {
+                    GetComponent<Rigidbody>().isKinematic = false;
+                    transform.parent = null;
+                    IsCarrying = false;
+                }
 
 
+            }
         }
     }
     
