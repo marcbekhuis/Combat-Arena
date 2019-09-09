@@ -11,11 +11,6 @@ public class ThrowObjects : MonoBehaviour
     bool IsCarrying = false;
     private bool touch = false;
     public int damage = 10;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
