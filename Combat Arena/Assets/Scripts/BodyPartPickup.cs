@@ -17,11 +17,13 @@ public class BodyPartPickup : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        
+        // checks if collider has playercombet
         if ((combat = collision.gameObject.GetComponent<PlayerCombat>()) != null)
         {
+            // checks if you lost one of your arms
             if (combat.leftArm == null && combat.rightArm != rigidbody)
             {
+                // gives the arm to the player and sends the needed variables
                 rigidbody.gameObject.transform.parent = combat.gameObject.transform;
                 combat.leftArm = rigidbody;
                 rigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
@@ -46,6 +48,7 @@ public class BodyPartPickup : MonoBehaviour
             }
             else if (combat.rightArm == null && combat.leftArm != rigidbody)
             {
+                // gives the arm to the player and sends the needed variables
                 rigidbody.gameObject.transform.parent = combat.gameObject.transform;
                 combat.rightArm = rigidbody;
                 rigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;

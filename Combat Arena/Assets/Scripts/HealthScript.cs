@@ -14,15 +14,18 @@ public class HealthScript : MonoBehaviour
 
     void Start()
     {
-        HealthText.text = "Health: " + health;
+        // sets the text on start
+        healthfunction();
         gameEnd = false;
     }
 
+    // Updates the text to show the new health
     public void healthfunction()
     {
         HealthText.text = "Health: " + health;
-        
     }
+
+    // removes the wanted health and check if its still above 0 or should show gameove canvas
     public void healthlose(int damage)
     {
         health = Mathf.Clamp(health - damage, 0, 1000);
@@ -33,6 +36,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
+    // shows the gameove canvas
     public void Gameover()
     {
         if (!gameEnd)
@@ -44,6 +48,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
+    // heals the wanted amount
     public void Heal(int regen)
     {
         health = Mathf.Clamp(health + regen,0,1000);

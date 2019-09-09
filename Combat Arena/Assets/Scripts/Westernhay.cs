@@ -15,6 +15,7 @@ public class Westernhay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // rotates the object to make it move
         rigidbody.angularVelocity = rigidbody.rotation * new Vector3(10,rigidbody.velocity.y, rigidbody.velocity.z);
         if (Random.Range(0,50) < 2)
         {

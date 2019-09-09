@@ -9,6 +9,7 @@ public class MedPack : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // Heals the player up to 1000.
         if ((health = other.gameObject.GetComponentInParent<HealthScript>()) != null)
         {
             health.Heal(100);
