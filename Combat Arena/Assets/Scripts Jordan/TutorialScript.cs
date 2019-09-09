@@ -10,6 +10,9 @@ public class TutorialScript : MonoBehaviour
     public GameObject text2;
     public GameObject text3;
     public GameObject text4;
+    public GameObject text5;
+    public GameObject text6;
+    public GameObject text7;
 
     public GameObject MenuButton;
     public GameObject NextButton;
@@ -21,6 +24,9 @@ public class TutorialScript : MonoBehaviour
         text2.SetActive(false);
         text3.SetActive(false);
         text4.SetActive(false);
+        text5.SetActive(false);
+        text6.SetActive(false);
+        text7.SetActive(false);
         MenuButton.SetActive(false);
     }
 
@@ -53,7 +59,25 @@ public class TutorialScript : MonoBehaviour
         {
             text3.SetActive(false);
             text = 3;
-            text4.SetActive(true);
+            text4.SetActive(true);   
+        }
+        else if (text == 3)
+        {
+            text4.SetActive(false);
+            text = 4;
+            text5.SetActive(true);
+        }
+        else if (text == 4)
+        {
+            text5.SetActive(false);
+            text = 5;
+            text6.SetActive(true);
+        }
+        else if (text == 5)
+        {
+            text6.SetActive(false);
+            text = 6;
+            text7.SetActive(true);
             NextButton.SetActive(false);
             MenuButton.SetActive(true);
         }
