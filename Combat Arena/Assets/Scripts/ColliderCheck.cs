@@ -26,7 +26,10 @@ public class ColliderCheck : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        if (this.transform.parent != collision.transform.parent || this.transform.parent != collision.transform)
+        {
+
+
             if (collision.transform.parent == healthscript.transform || collision.transform == healthscript.transform)
             {
                 if (collision.gameObject.name == "LeftArm" || collision.gameObject.name == "RightArm")
@@ -74,6 +77,6 @@ public class ColliderCheck : MonoBehaviour
                 }
                 healthscript.healthlose(bodypartSelf.damage);
             }
-        
+        }
     }
 }
