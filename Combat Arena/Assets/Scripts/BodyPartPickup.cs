@@ -5,6 +5,8 @@ using UnityEngine;
 public class BodyPartPickup : MonoBehaviour
 {
     Rigidbody rigidbody;
+    public AudioSource source;
+    public AudioClip clip;
 
     private void Start()
     {
@@ -38,6 +40,7 @@ public class BodyPartPickup : MonoBehaviour
                         }
                     }
                 }
+                source.PlayOneShot(clip);
                 Destroy(this);
             }
             else if (combat.rightArm == null && combat.leftArm != rigidbody)
@@ -61,6 +64,7 @@ public class BodyPartPickup : MonoBehaviour
                         }
                     }
                 }
+                source.PlayOneShot(clip);
                 Destroy(this);
             }
         }

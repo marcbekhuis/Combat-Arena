@@ -10,6 +10,7 @@ public class LoseBodyParts : MonoBehaviour
     [Space]
     public HealthScript healthscript;
     public AudioSource source;
+    public AudioClip punch;
 
     private void Start()
     {
@@ -54,7 +55,7 @@ public class LoseBodyParts : MonoBehaviour
                                     temp.leftArm = null;
                                 }
                             }
-                            source.Play();
+                            source.PlayOneShot(punch);
                             bodyPartRB.gameObject.transform.parent = null;
                             bodypartEnemy.health -= bodypartSelf.damage;
                         }

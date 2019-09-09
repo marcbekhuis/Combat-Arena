@@ -867,6 +867,7 @@ MonoBehaviour:
   punchSource: {fileID: 580287147}
   healthscript: {fileID: 0}
   source: {fileID: 4816535338218055232}
+  punch: {fileID: 8300000, guid: 1a3d7c8d0b1b0034c9af84649b88c26f, type: 3}
 --- !u!114 &1519681755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,6 +1662,7 @@ MonoBehaviour:
   punchSource: {fileID: 1381512355}
   healthscript: {fileID: 0}
   source: {fileID: 2214492017928023141}
+  punch: {fileID: 8300000, guid: 1a3d7c8d0b1b0034c9af84649b88c26f, type: 3}
 --- !u!114 &188461928
 MonoBehaviour:
   m_ObjectHideFlags: 0
