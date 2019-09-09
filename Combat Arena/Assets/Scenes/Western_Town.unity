@@ -17932,10 +17932,6 @@ PrefabInstance:
       propertyPath: input
       value: 331
       objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2137747050, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: attack
       value: 335
@@ -17969,6 +17965,10 @@ PrefabInstance:
         type: 3}
       propertyPath: Yaxis
       value: Joystick Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: switchCameraMode

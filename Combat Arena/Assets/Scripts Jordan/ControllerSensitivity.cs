@@ -12,7 +12,7 @@ public class ControllerSensitivity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // sets Variable to the value of the controller sensitivity that has been changed inside "Settings" Scene
         ControllerSens = (int)ControllerSen.value;
-        Debug.Log(ControllerSens);
     }
 }

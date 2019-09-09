@@ -65,19 +65,6 @@ public class LoseBodyParts : MonoBehaviour
                         }
                     }
                 }
-                else if (collision.gameObject.name == "Head")
-                {
-                    Bodypart bodypartEnemy = collision.gameObject.GetComponent<Bodypart>();
-                    if (bodypartEnemy.health - bodypartSelf.damage <= 0)
-                    {
-                        bodypartEnemy.health -= bodypartSelf.damage;
-                        healthscript.Gameover();
-                    }
-                    else
-                    {
-                        bodypartEnemy.health -= bodypartSelf.damage;
-                    }
-                }
                 healthscript.healthlose(bodypartSelf.damage);
                 punchSource.Play();
             }

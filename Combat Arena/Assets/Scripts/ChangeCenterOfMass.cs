@@ -9,6 +9,7 @@ public class ChangeCenterOfMass : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // changes the center of mass from the rigidbody to the wanted location
         GetComponent<Rigidbody>().centerOfMass = centerOfMass;
     }
 }

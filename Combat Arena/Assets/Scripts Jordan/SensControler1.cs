@@ -13,8 +13,7 @@ public class SensControler1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // When the game plays, it sets the Sensitivity of the P2 Camera to the value of ControllerSens
         cursemovescript.Sensitivity = ControllerSensitivity.ControllerSens;
-        Debug.Log(ControllerSensitivity.ControllerSens);
-        Debug.Log(cursemovescript.Sensitivity);
     }
 }

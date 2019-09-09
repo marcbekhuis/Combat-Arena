@@ -8,11 +8,7 @@ public class HorizontalTrigger : MonoBehaviour
     public Toggle HoriSwitch;
     public static bool Horizontal = false;
 
-    private void Update()
-    {
-        Debug.Log(Horizontal);
-    }
-
+    // Horizontal wordt opgehaalt op de checkbox in Settings. als het true is, zet het de game's camera naar horizontal 
     public void Toggled ()
     {
         if (Horizontal == false)

@@ -13,8 +13,7 @@ public class SensControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // When the game plays, it sets the Sensitivity of the P1 Camera to the value of MouseSens
         cursemovescript.Sensitivity = MouseSensitivity.MouseSens;
-       // Debug.Log(MouseSensitivity.MouseSens);
-      //  Debug.Log(cursemovescript.Sensitivity);
     }
 }
