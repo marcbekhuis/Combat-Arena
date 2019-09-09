@@ -29,19 +29,19 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * speed, rb.velocity.y, Input.GetAxis(Yaxis) * speed);
 
+        if (!onGround && Physics.CheckBox(this.transform.position - new Vector3(0, 1.6f, 0), new Vector3(0.45f, 0.01f, 0.2f), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
+        {
+            onGround = true;
+            source.Play();
+        }
         if (Input.GetKey(jump) && jumpCooldown <= 0)
         {
-            if (onGround == true)
+            if (onGround)
             {
                 rb.AddForce(new Vector3(0, 40, 0), ForceMode.VelocityChange);
                 onGround = false;
                 jumpCooldown = 0.3f;
             }
-        }
-        if(!onGround && Physics.CheckBox(this.transform.position - new Vector3(0, 1.6f, 0), new Vector3(0.45f, 0.01f, 0.2f), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
-        {
-            onGround = true;
-            source.Play();
         }
         jumpCooldown -= Time.deltaTime;
 
