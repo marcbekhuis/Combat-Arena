@@ -21,6 +21,7 @@ public class TutorialScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        // makes certain text invisable and not appear until a certain text value has been given.
         text2.SetActive(false);
         text3.SetActive(false);
         text4.SetActive(false);
@@ -30,19 +31,9 @@ public class TutorialScript : MonoBehaviour
         MenuButton.SetActive(false);
     }
 
-    private void Update()
-    {
-        if (text == 2)
-        {
-            NextButton.SetActive(true);
-            MenuButton.SetActive(false);
-        }
-        Debug.Log(text);
-    }
-
     public void TutorialNext ()
     {
-        Debug.Log("buttonpressed " + text);
+        // makes text appear if their text value is met.
         if (text == 0)
         {
             text1.SetActive(false);
@@ -78,6 +69,7 @@ public class TutorialScript : MonoBehaviour
             text6.SetActive(false);
             text = 6;
             text7.SetActive(true);
+            // shows a main menu button to return easier back to main menu
             NextButton.SetActive(false);
             MenuButton.SetActive(true);
         }

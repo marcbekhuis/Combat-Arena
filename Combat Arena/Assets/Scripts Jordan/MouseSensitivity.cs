@@ -12,7 +12,7 @@ public class MouseSensitivity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // sets Variable to the value of the mouse sensitivity that has been changed inside "Settings" Scene
         MouseSens = (int)MouseSen.value;
-        Debug.Log(MouseSens);
     }
 }

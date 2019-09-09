@@ -18,6 +18,7 @@ public class TutorialScript1 : MonoBehaviour
 
     public void TutorialBack()
     {
+        // makes certain text invisable and not appear until a certain text value has been given.
         if (TutorialScript.text == 6)
         {
             MenuButton.SetActive(false);
@@ -58,6 +59,7 @@ public class TutorialScript1 : MonoBehaviour
         }
         else if (TutorialScript.text == 0)
         {
+            // if you are at the entire beginning, you go back to main menu
             SceneManager.LoadScene("Main Menu");
         }
     }
