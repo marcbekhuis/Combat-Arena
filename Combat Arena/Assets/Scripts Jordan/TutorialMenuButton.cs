@@ -7,6 +7,7 @@ public class TutorialMenuButton : MonoBehaviour
 {
     public void MainMenu ()
     {
+        TutorialScript.text = 0;
         SceneManager.LoadScene("Main Menu");
     }
 }
