@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ThrowObjects : MonoBehaviour
 {
-
     public Transform player;
     public Transform playerCamera;
     public float throwingforce;
     bool hasPlayer = false;
     bool IsCarrying = false;
     private bool touch = false;
-
+    public int damage = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +22,7 @@ public class ThrowObjects : MonoBehaviour
     {
         float distance = Vector3.Distance(gameObject.transform.position, player.position);
 
-        if(distance <= 2.5f)
+        if (distance <= 2.0f)
         {
             hasPlayer = true;
         }
@@ -31,13 +30,13 @@ public class ThrowObjects : MonoBehaviour
         {
             hasPlayer = false;
         }
-
-        if(hasPlayer && Input.GetButtonDown("Use")){
+        if (hasPlayer && Input.GetButtonDown("Use"))
+        {
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = playerCamera;
             IsCarrying = true;
         }
-        if(IsCarrying == true)
+        if (IsCarrying == true)
         {
             if (touch)
             {
@@ -51,21 +50,17 @@ public class ThrowObjects : MonoBehaviour
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 IsCarrying = false;
-                GetComponent<Rigidbody>().AddForce(playerCamera.forward * throwingforce);
-            }else if(Input.GetMouseButtonDown(1)){
+                GetComponent<Rigidbody>().AddForce(playerCamera.forward * Random.Range(400, 900));
+            }
+            else if (Input.GetMouseButtonDown(1))
+            {
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 IsCarrying = false;
             }
+
+
         }
-        
-        void OnTriggerEnter(Collider other)
-        {
-            if (IsCarrying)
-            {
-                touch = true;
-            }
-        }
-        
     }
+    
 }

@@ -7,6 +7,7 @@ public class BodyPartPickup : MonoBehaviour
     Rigidbody rigidbody;
     public AudioSource source;
     public AudioClip clip;
+    PlayerCombat combat;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class BodyPartPickup : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        PlayerCombat combat;
+        
         if ((combat = collision.gameObject.GetComponent<PlayerCombat>()) != null)
         {
             if (combat.leftArm == null && combat.rightArm != rigidbody)
