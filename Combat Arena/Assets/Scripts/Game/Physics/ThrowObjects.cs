@@ -6,7 +6,10 @@ public class ThrowObjects : MonoBehaviour
 {
     public Transform[] players;
     public Transform[] playerCameras;
+    [Space]
+
     public float throwingforce;
+
     bool hasPlayer = false;
     bool IsCarrying = false;
     private bool touch = false;
@@ -27,7 +30,7 @@ public class ThrowObjects : MonoBehaviour
             {
                 hasPlayer = false;
             }
-            if (hasPlayer && Input.GetButtonDown("Use"))
+            if (hasPlayer && ((x == 0 && Input.GetKeyDown(KeyCode.E)) || (x == 1 && Input.GetKeyDown(KeyCode.JoystickButton0))))
             {
                 GetComponent<Rigidbody>().isKinematic = true;
                 transform.parent = playerCameras[x];
@@ -42,14 +45,14 @@ public class ThrowObjects : MonoBehaviour
                     IsCarrying = false;
                     touch = false;
                 }
-                if (Input.GetMouseButtonDown(0))
+                if ((x == 0 && Input.GetKeyDown(KeyCode.Mouse0)) || (x == 1 && Input.GetKeyDown(KeyCode.JoystickButton5)))
                 {
                     GetComponent<Rigidbody>().isKinematic = false;
                     transform.parent = null;
                     IsCarrying = false;
                     GetComponent<Rigidbody>().AddForce(playerCameras[x].forward * Random.Range(400, 900));
                 }
-                else if (Input.GetMouseButtonDown(1))
+                else if ((x == 0 && Input.GetKeyDown(KeyCode.Mouse1)) || (x == 1 && Input.GetKeyDown(KeyCode.JoystickButton2)))
                 {
                     GetComponent<Rigidbody>().isKinematic = false;
                     transform.parent = null;
