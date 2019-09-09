@@ -9,9 +9,11 @@ public class PlayerMovement : MonoBehaviour
     [Space]
 
     public KeyCode jump = KeyCode.Space;
+    public KeyCode run = KeyCode.LeftShift;
     [Space]
 
-    public float speed = 5f;
+    public float walkSpeed = 5f;
+    public float runSpeed = 10f;
     public AudioSource source;
 
     Rigidbody rb;
@@ -27,7 +29,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * speed, rb.velocity.y, Input.GetAxis(Yaxis) * speed);
+        if (Input.GetKey(run))
+        {
+            rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * walkSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * runSpeed);
+        }
+        else
+        {
+            rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * walkSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * walkSpeed);
+        }
 
         if (!onGround && Physics.CheckBox(this.transform.position - new Vector3(0, 1.6f, 0), new Vector3(0.45f, 0.01f, 0.2f), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
         {
