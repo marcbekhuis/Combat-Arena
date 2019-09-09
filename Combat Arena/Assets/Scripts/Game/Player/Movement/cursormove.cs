@@ -17,6 +17,7 @@ public class cursormove : MonoBehaviour
 
     private void Start()
     {
+        //if game starts the mouse cursor will be invisible
         MoveAllowed = true;
         if (!cursorvisibility)
         {
@@ -30,6 +31,7 @@ public class cursormove : MonoBehaviour
     {
         if (MoveAllowed == true)
         {
+            //the rotationhor and ver + the sensity * the input so it knows the sensitivity
             rotateHor += Sensitivity * Input.GetAxis(Xaxis);
             rotateVer += Sensitivity * Input.GetAxis(Yaxis);
 
@@ -41,7 +43,7 @@ public class cursormove : MonoBehaviour
             {
                 rotateVer = -80;
             }
-
+            //the cursor move
             player.transform.eulerAngles = new Vector3(0, rotateHor, 0);
             transform.eulerAngles = new Vector3(-rotateVer, rotateHor, 0);
         }

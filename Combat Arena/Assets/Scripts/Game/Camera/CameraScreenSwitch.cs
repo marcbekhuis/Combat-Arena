@@ -9,6 +9,7 @@ public class CameraScreenSwitch : MonoBehaviour
 
     public bool Horizontal = false;
 
+    //checks if the horizontal trigger is horizontal so the boolean becomes true
     private void Start()
     {
         if (HorizontalTrigger.Horizontal == true)
@@ -18,6 +19,7 @@ public class CameraScreenSwitch : MonoBehaviour
     }
 
     // Update is called once per frame
+    // if horizontal = true call ChangeScreen();
     void Update()
     {
         if (Horizontal)
@@ -26,6 +28,8 @@ public class CameraScreenSwitch : MonoBehaviour
         }
     }
 
+
+    //checks if horizontal = true so it change screen else it vertical
     public void ChangeScreen()
     {
         if (Horizontal)

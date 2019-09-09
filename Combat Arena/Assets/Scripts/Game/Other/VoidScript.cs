@@ -8,7 +8,7 @@ public class VoidScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // shows the gameover canvas when the player hit the box
+        // shows the gameover canvas when the player hits the box
         if ((health = other.gameObject.GetComponentInParent<HealthScript>()) != null)
         {
             health.Gameover();
