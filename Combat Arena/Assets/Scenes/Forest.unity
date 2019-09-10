@@ -899,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 372588826}
     - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: player
-      value: Player 1
+      value: Player 1 (Mouse And Keyboard)
       objectReference: {fileID: 0}
     - target: {fileID: 3187631372014352130, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
@@ -966,6 +966,14 @@ PrefabInstance:
       propertyPath: input
       value: 331
       objectReference: {fileID: 0}
+    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2137747050, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: attack
       value: 335
@@ -999,14 +1007,6 @@ PrefabInstance:
         type: 3}
       propertyPath: Yaxis
       value: Joystick Y
-      objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: switchCameraMode
@@ -3664,6 +3664,10 @@ PrefabInstance:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 372588826}
+    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: player
+      value: Player 2 (Controller)
+      objectReference: {fileID: 0}
     - target: {fileID: 3187631372014352130, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3724,6 +3728,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1663752811}
+    - target: {fileID: 8613569755137976026, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+        type: 3}
+      propertyPath: HealthText
+      value: 
+      objectReference: {fileID: 891753805}
     - target: {fileID: 860681647, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: healthscript
       value: 
@@ -3732,11 +3741,6 @@ PrefabInstance:
       propertyPath: healthscript
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8613569755137976026, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-        type: 3}
-      propertyPath: HealthText
-      value: 
-      objectReference: {fileID: 891753805}
     m_RemovedComponents:
     - {fileID: 1900852249, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}

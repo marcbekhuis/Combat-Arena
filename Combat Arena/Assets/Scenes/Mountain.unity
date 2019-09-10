@@ -1662,6 +1662,14 @@ PrefabInstance:
       propertyPath: input
       value: 331
       objectReference: {fileID: 0}
+    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2137747050, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: attack
       value: 335
@@ -1695,14 +1703,6 @@ PrefabInstance:
         type: 3}
       propertyPath: Yaxis
       value: Joystick Y
-      objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1900852250, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1765151449, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: switchCameraMode
@@ -9527,6 +9527,10 @@ PrefabInstance:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 372588826}
+    - target: {fileID: 45571268, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
+      propertyPath: player
+      value: Player 2 (Controller)
+      objectReference: {fileID: 0}
     - target: {fileID: 3187631372014352130, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10910,7 +10914,7 @@ MonoBehaviour:
   health: 1000
   HealthText: {fileID: 1242938966}
   gameover: {fileID: 372588826}
-  player: Player 1
+  player: Player 1 (Mouse And Keyboard)
 --- !u!1 &2000293605
 GameObject:
   m_ObjectHideFlags: 0

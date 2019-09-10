@@ -1160,7 +1160,9 @@ MonoBehaviour:
   Xaxis: HorizontalP1
   Yaxis: VerticalP1
   jump: 32
-  speed: 10
+  run: 304
+  walkSpeed: 10
+  runSpeed: 20
   source: {fileID: 844806223280501874}
 --- !u!114 &1765151449
 MonoBehaviour:
