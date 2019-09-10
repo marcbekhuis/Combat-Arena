@@ -10,7 +10,7 @@ public class HealthScript : MonoBehaviour
     public Text HealthText;
     public GameObject gameover;
     public string player;
-    static bool gameEnd = false;
+    public static bool gameEnd = false;
 
     void Start()
     {

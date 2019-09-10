@@ -22,28 +22,31 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(attack))
+        if (!PauseMenuToggle.paused && !HealthScript.gameEnd)
         {
-            if (Random.Range(0,50) < 25 && leftArmCooldown <= 0 && leftArm != null)
+            if (Input.GetKeyDown(attack))
             {
-                leftArm.AddTorque(leftArm.transform.rotation * new Vector3(-10,0, 0), ForceMode.Impulse);
-                Debug.Log("leftArm");
-                leftArmCooldown = 1;
-                combat = true;
+                if (Random.Range(0, 50) < 25 && leftArmCooldown <= 0 && leftArm != null)
+                {
+                    leftArm.AddTorque(leftArm.transform.rotation * new Vector3(-10, 0, 0), ForceMode.Impulse);
+                    Debug.Log("leftArm");
+                    leftArmCooldown = 1;
+                    combat = true;
+                }
+                else if (rightArmCooldown <= 0 && rightArm != null)
+                {
+                    rightArm.AddTorque(rightArm.transform.rotation * new Vector3(-10, 0, 0), ForceMode.Impulse);
+                    Debug.Log("RightArm");
+                    rightArmCooldown = 1;
+                    combat = true;
+                }
             }
-            else if (rightArmCooldown <= 0 && rightArm != null)
+            if (combat == true && (rightArmCooldown <= 0.05f && leftArmCooldown <= 0.05f))
             {
-                rightArm.AddTorque(rightArm.transform.rotation * new Vector3(-10, 0, 0), ForceMode.Impulse);
-                Debug.Log("RightArm");
-                rightArmCooldown = 1;
-                combat = true;
+                combat = false;
             }
+            rightArmCooldown -= Time.deltaTime;
+            leftArmCooldown -= Time.deltaTime;
         }
-        if (combat == true && (rightArmCooldown <= 0.05f && leftArmCooldown <= 0.05f))
-        {
-            combat = false;
-        }
-        rightArmCooldown -= Time.deltaTime;
-        leftArmCooldown -= Time.deltaTime;
     }
 }

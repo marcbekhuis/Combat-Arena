@@ -29,33 +29,36 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jumpCooldown -= Time.deltaTime;
+        if (!PauseMenuToggle.paused && !HealthScript.gameEnd)
+        {
+            jumpCooldown -= Time.deltaTime;
 
-        //checks if the player in on the ground or not 
-        if (!onGround && Physics.CheckBox(this.transform.position - new Vector3(0, 1.6f, 0), new Vector3(0.01f, 0.01f, 0.01f), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
-        {
-            onGround = true;
-            source.Play();
-        }
-
-        //nothing special just checks if certain keys are pressed, change the speed or adds force
-        if (Input.GetKey(run))
-        {
-            rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * runSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * runSpeed);
-        }
-        else
-        {
-            rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * walkSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * walkSpeed);
-        }
-
-        // the jump if statement that adds force 
-        if (Input.GetKey(jump) && jumpCooldown <= 0)
-        {
-            if (onGround)
+            //checks if the player in on the ground or not 
+            if (!onGround && Physics.CheckBox(this.transform.position - new Vector3(0, 1.6f, 0), new Vector3(0.01f, 0.01f, 0.01f), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
             {
-                rb.AddForce(new Vector3(0, 40, 0), ForceMode.VelocityChange);
-                onGround = false;
-                jumpCooldown = 0.3f;
+                onGround = true;
+                source.Play();
+            }
+
+            //nothing special just checks if certain keys are pressed, change the speed or adds force
+            if (Input.GetKey(run))
+            {
+                rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * runSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * runSpeed);
+            }
+            else
+            {
+                rb.velocity = transform.rotation * new Vector3(Input.GetAxis(Xaxis) * walkSpeed, rb.velocity.y, Input.GetAxis(Yaxis) * walkSpeed);
+            }
+
+            // the jump if statement that adds force 
+            if (Input.GetKey(jump) && jumpCooldown <= 0)
+            {
+                if (onGround)
+                {
+                    rb.AddForce(new Vector3(0, 40, 0), ForceMode.VelocityChange);
+                    onGround = false;
+                    jumpCooldown = 0.3f;
+                }
             }
         }
     }

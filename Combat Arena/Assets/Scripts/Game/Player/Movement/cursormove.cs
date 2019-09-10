@@ -29,23 +29,26 @@ public class cursormove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MoveAllowed == true)
+        if (!PauseMenuToggle.paused && !HealthScript.gameEnd)
         {
-            //the rotationhor and ver + the sensity * the input so it knows the sensitivity
-            rotateHor += Sensitivity * Input.GetAxis(Xaxis);
-            rotateVer += Sensitivity * Input.GetAxis(Yaxis);
+            if (MoveAllowed == true)
+            {
+                //the rotationhor and ver + the sensity * the input so it knows the sensitivity
+                rotateHor += Sensitivity * Input.GetAxis(Xaxis);
+                rotateVer += Sensitivity * Input.GetAxis(Yaxis);
 
-            if (rotateVer >= 80)
-            {
-                rotateVer = 80;
+                if (rotateVer >= 80)
+                {
+                    rotateVer = 80;
+                }
+                else if (rotateVer <= -80)
+                {
+                    rotateVer = -80;
+                }
+                //the cursor move
+                player.transform.eulerAngles = new Vector3(0, rotateHor, 0);
+                transform.eulerAngles = new Vector3(-rotateVer, rotateHor, 0);
             }
-            else if (rotateVer <= -80)
-            {
-                rotateVer = -80;
-            }
-            //the cursor move
-            player.transform.eulerAngles = new Vector3(0, rotateHor, 0);
-            transform.eulerAngles = new Vector3(-rotateVer, rotateHor, 0);
         }
     }
 }

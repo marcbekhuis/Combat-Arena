@@ -6,21 +6,32 @@ public class PauseMenuToggle : MonoBehaviour
 {
     public KeyCode input = KeyCode.Escape;
     public GameObject canvas;
+    public static bool paused;
+
+    private void Start()
+    {
+        paused = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(input))
+        if (!HealthScript.gameEnd)
         {
-            if (canvas.activeSelf)
+            if (Input.GetKeyDown(input))
             {
-                canvas.SetActive(false);
-                Cursor.visible = false;
-            }
-            else
-            {
-                canvas.SetActive(true);
-                Cursor.visible = true;
+                if (canvas.activeSelf)
+                {
+                    canvas.SetActive(false);
+                    Cursor.visible = false;
+                    paused = false;
+                }
+                else
+                {
+                    canvas.SetActive(true);
+                    Cursor.visible = true;
+                    paused = true;
+                }
             }
         }
     }

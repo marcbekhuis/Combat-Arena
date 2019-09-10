@@ -2257,7 +2257,7 @@ GameObject:
   - component: {fileID: 3187631373748888652}
   - component: {fileID: 4930300387446490091}
   - component: {fileID: 713828177}
-  - component: {fileID: 1824480939}
+  - component: {fileID: 6297395398262623050}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   health: 50
   damage: 0
   playerHealthLose: 1
---- !u!114 &1824480939
+--- !u!114 &6297395398262623050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2332,6 +2332,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3187631373748888655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9260b75553fc8df4d93c3af1adb49486, type: 3}
+  m_Script: {fileID: 11500000, guid: fba813214ae9cae448ea7b92f9055178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
