@@ -1721,12 +1721,6 @@ PrefabInstance:
     - {fileID: 713828176, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
     - {fileID: 1900852249, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
---- !u!4 &350473376 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1900852251, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 350473375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &350473377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3187631372014352130, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
@@ -2862,6 +2856,12 @@ Transform:
   m_Father: {fileID: 1193618600}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 39.51, z: 0}
+--- !u!4 &521146492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3187631373748888652, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1824480937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &531839903
 GameObject:
   m_ObjectHideFlags: 0
@@ -7093,12 +7093,22 @@ PrefabInstance:
         type: 3}
       propertyPath: playerCameras.Array.data[0]
       value: 
-      objectReference: {fileID: 1824480938}
+      objectReference: {fileID: 521146492}
     - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
         type: 3}
       propertyPath: playerCameras.Array.data[1]
       value: 
-      objectReference: {fileID: 350473376}
+      objectReference: {fileID: 1738801566}
+    - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
+        type: 3}
+      propertyPath: playerCameras.Array.data[2]
+      value: 
+      objectReference: {fileID: 521146492}
+    - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
+        type: 3}
+      propertyPath: playerCameras.Array.data[3]
+      value: 
+      objectReference: {fileID: 1738801566}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7f675d40d890946849bd159f1a2fa9, type: 3}
 --- !u!1 &1385343716
@@ -9040,6 +9050,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733908326}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1738801566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3187631373748888652, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 350473375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1757224224
 GameObject:
   m_ObjectHideFlags: 0
@@ -9581,12 +9597,6 @@ PrefabInstance:
       objectReference: {fileID: 1994806094}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
---- !u!4 &1824480938 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1900852251, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1824480937}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1824480939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3187631372014352130, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
@@ -10307,12 +10317,22 @@ PrefabInstance:
         type: 3}
       propertyPath: playerCameras.Array.data[0]
       value: 
-      objectReference: {fileID: 1824480938}
+      objectReference: {fileID: 521146492}
     - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
         type: 3}
       propertyPath: playerCameras.Array.data[1]
       value: 
-      objectReference: {fileID: 350473376}
+      objectReference: {fileID: 1738801566}
+    - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
+        type: 3}
+      propertyPath: playerCameras.Array.data[2]
+      value: 
+      objectReference: {fileID: 521146492}
+    - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
+        type: 3}
+      propertyPath: playerCameras.Array.data[3]
+      value: 
+      objectReference: {fileID: 1738801566}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7f675d40d890946849bd159f1a2fa9, type: 3}
 --- !u!1 &1947673276
