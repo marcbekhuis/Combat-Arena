@@ -1242,7 +1242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Armed & Ready is a 2 player pvp fight
+  m_Text: 'Armed & Ready is a 2 player pvp fighting game.
 
     Your goal is to knock the opponent out by punching him to death'
 --- !u!222 &1357072048
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   text5: {fileID: 354082689}
   text6: {fileID: 817978772}
   text7: {fileID: 927672915}
-  text8: {fileID: 0}
+  text8: {fileID: 1530561172}
   MenuButton: {fileID: 939946809}
   NextButton: {fileID: 2127547869}
 --- !u!114 &1433233833
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   text5: {fileID: 354082689}
   text6: {fileID: 817978772}
   text7: {fileID: 927672915}
-  text8: {fileID: 0}
+  text8: {fileID: 1530561172}
   MenuButton: {fileID: 939946809}
   NextButton: {fileID: 2127547869}
 --- !u!114 &2127547872
