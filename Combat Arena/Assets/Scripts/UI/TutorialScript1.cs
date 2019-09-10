@@ -28,7 +28,7 @@ public class TutorialScript1 : MonoBehaviour
             TutorialScript.text = 6;
             text7.SetActive(true);
         }
-        if (TutorialScript.text == 6)
+        else if (TutorialScript.text == 6)
         {
             text7.SetActive(false);
             TutorialScript.text = 5;
