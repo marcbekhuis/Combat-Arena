@@ -211,12 +211,12 @@ PrefabInstance:
         type: 3}
       propertyPath: playerCameras.Array.data[0]
       value: 
-      objectReference: {fileID: 791419948}
+      objectReference: {fileID: 742121655}
     - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
         type: 3}
       propertyPath: playerCameras.Array.data[1]
       value: 
-      objectReference: {fileID: 1246984853}
+      objectReference: {fileID: 661980722}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7f675d40d890946849bd159f1a2fa9, type: 3}
 --- !u!1 &36756742
@@ -1323,12 +1323,12 @@ PrefabInstance:
         type: 3}
       propertyPath: playerCameras.Array.data[0]
       value: 
-      objectReference: {fileID: 791419948}
+      objectReference: {fileID: 742121655}
     - target: {fileID: 4729374959313557695, guid: 4e7f675d40d890946849bd159f1a2fa9,
         type: 3}
       propertyPath: playerCameras.Array.data[1]
       value: 
-      objectReference: {fileID: 1246984853}
+      objectReference: {fileID: 661980722}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7f675d40d890946849bd159f1a2fa9, type: 3}
 --- !u!1 &556509148
@@ -1507,6 +1507,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0b2f54d9420094243af649529427d9bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1209e91b9d73dc046a2d8e0013e3e33e, type: 3}
+--- !u!4 &661980722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3187631373748888652, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 350473375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &742121655 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3187631373748888652, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1824480937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &780550678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,12 +1563,6 @@ Transform:
   m_Father: {fileID: 36756743}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &791419948 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1900852251, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1824480937}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &861611480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,12 +2386,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.034699365, y: 0.027496787}
   m_EdgeRadius: 0
---- !u!4 &1246984853 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1900852251, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 350473375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1357649950
 GameObject:
   m_ObjectHideFlags: 0
