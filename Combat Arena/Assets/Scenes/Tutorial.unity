@@ -300,6 +300,7 @@ RectTransform:
   - {fileID: 354082692}
   - {fileID: 817978775}
   - {fileID: 927672918}
+  - {fileID: 1530561173}
   - {fileID: 2127547870}
   - {fileID: 1433233831}
   - {fileID: 939946810}
@@ -841,7 +842,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: If one of the players are below 500 health, health packs will spawn. there
+  m_Text: If one of the players is below 500 health, health packs will spawn. there
     can only be 3 health packs in the map. Becareful as the enemy can also pick up
     the health pack.
 --- !u!222 &927672917
@@ -904,7 +905,7 @@ RectTransform:
   m_Children:
   - {fileID: 116362180}
   m_Father: {fileID: 153627635}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1241,7 +1242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Combat arena is a 2 player pvp fight
+  m_Text: 'Armed & Ready is a 2 player pvp fight
 
     Your goal is to knock the opponent out by punching him to death'
 --- !u!222 &1357072048
@@ -1285,7 +1286,7 @@ RectTransform:
   m_Children:
   - {fileID: 1013213850}
   m_Father: {fileID: 153627635}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1311,6 +1312,7 @@ MonoBehaviour:
   text5: {fileID: 354082689}
   text6: {fileID: 817978772}
   text7: {fileID: 927672915}
+  text8: {fileID: 0}
   MenuButton: {fileID: 939946809}
   NextButton: {fileID: 2127547869}
 --- !u!114 &1433233833
@@ -1406,6 +1408,87 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433233830}
+  m_CullTransparentMesh: 0
+--- !u!1 &1530561172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530561173}
+  - component: {fileID: 1530561175}
+  - component: {fileID: 1530561174}
+  m_Layer: 5
+  m_Name: Tutorial Text 7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1530561173
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530561172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 153627635}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: -11.1}
+  m_SizeDelta: {x: 641.3, y: 196.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1530561174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530561172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: A small cube can be picked up and thrown. Just look at the object and press
+    E for Mouse or A for Controller. Press left click to throw or right click to drop
+    for the mouse player. Press RB to throw or X to drop it.
+--- !u!222 &1530561175
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530561172}
   m_CullTransparentMesh: 0
 --- !u!1 &1738198731
 GameObject:
@@ -1759,7 +1842,7 @@ RectTransform:
   m_Children:
   - {fileID: 842270296}
   m_Father: {fileID: 153627635}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1785,6 +1868,7 @@ MonoBehaviour:
   text5: {fileID: 354082689}
   text6: {fileID: 817978772}
   text7: {fileID: 927672915}
+  text8: {fileID: 0}
   MenuButton: {fileID: 939946809}
   NextButton: {fileID: 2127547869}
 --- !u!114 &2127547872
