@@ -48,7 +48,7 @@ public class ArmSpawner : MonoBehaviour
         if (armsSpawned < amount)
         {
             Vector3 location = new Vector3(Random.Range(-500, 500), transform.position.y, Random.Range(-500, 500));
-            if (!Physics.CheckBox(location, new Vector3(1, 1, 1), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")) && Physics.CheckBox(location - new Vector3(0, 4, 0), new Vector3(1, 3, 1), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
+            if (!Physics.CheckBox(location, new Vector3(3, 3, 3), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")) && Physics.CheckBox(location - new Vector3(0, 5, 0), new Vector3(3, 7, 3), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
             {
                 int randomInt = Random.Range(0, 100);
                 if (randomInt < 60)
@@ -72,10 +72,10 @@ public class ArmSpawner : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        // Draw a semitransparent blue cube at the transforms position
+        // Draw a semitransparent red cube at the transforms position
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawCube(new Vector3(transform.position.x, transform.position.y, transform.position.z), new Vector3(3, 3, 3));
-        // Draw a semitransparent red cube at the transforms position
+        // Draw a semitransparent green cube at the transforms position
         Gizmos.color = new Color(0, 1, 0, 0.5f);
         Gizmos.DrawCube(new Vector3(transform.position.x, transform.position.y, transform.position.z) - new Vector3(0, 5, 0), new Vector3(3, 7, 3));
     }

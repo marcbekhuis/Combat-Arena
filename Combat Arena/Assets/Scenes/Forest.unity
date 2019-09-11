@@ -3003,7 +3003,7 @@ PrefabInstance:
     - target: {fileID: 5018299032498937332, guid: a3abdcbf7ec2dcf48b23573cefd810ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.84
+      value: 12.58
       objectReference: {fileID: 0}
     - target: {fileID: 5018299032498937332, guid: a3abdcbf7ec2dcf48b23573cefd810ba,
         type: 3}
@@ -3747,6 +3747,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1663752811}
+    - target: {fileID: 8613569755137976026, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
+        type: 3}
+      propertyPath: HealthText
+      value: 
+      objectReference: {fileID: 891753805}
     - target: {fileID: 860681647, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
       propertyPath: healthscript
       value: 
@@ -3755,11 +3760,6 @@ PrefabInstance:
       propertyPath: healthscript
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8613569755137976026, guid: b9d50a0d048db3b4ea600ffcdd9efd8c,
-        type: 3}
-      propertyPath: HealthText
-      value: 
-      objectReference: {fileID: 891753805}
     m_RemovedComponents:
     - {fileID: 1900852249, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9d50a0d048db3b4ea600ffcdd9efd8c, type: 3}
