@@ -23,22 +23,25 @@ public class MedPackSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (cooldown <= 0)
+        if (!PauseMenuToggle.paused && !HealthScript.gameEnd)
         {
-            // spawns a medpack if 1 of the 2 players is under the 500 health
-            if (medPacksSpawned < maxAmount && (player1.health < 500 || player2.health < 500))
+            if (cooldown <= 0)
             {
-                Vector3 location = new Vector3(Random.Range(-500, 500), transform.position.y, Random.Range(-500, 500));
-                if (!Physics.CheckBox(location, new Vector3(3, 3, 3), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")) && Physics.CheckBox(location - new Vector3(0, 5, 0), new Vector3(3, 7, 3), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
+                // spawns a medpack if 1 of the 2 players is under the 500 health
+                if (medPacksSpawned < maxAmount && (player1.health < 500 || player2.health < 500))
                 {
-                    GameObject temp = Instantiate(medPack, location, new Quaternion(0, 0, 0, 0), this.transform);
-                    temp.GetComponent<MedPack>().medPackSpawner = this;
-                    medPacksSpawned++;
-                    cooldown = 60;
+                    Vector3 location = new Vector3(Random.Range(-500, 500), transform.position.y, Random.Range(-500, 500));
+                    if (!Physics.CheckBox(location, new Vector3(3, 3, 3), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")) && Physics.CheckBox(location - new Vector3(0, 5, 0), new Vector3(3, 7, 3), new Quaternion(0, 0, 0, 0), 1 << LayerMask.NameToLayer("Solid")))
+                    {
+                        GameObject temp = Instantiate(medPack, location, new Quaternion(0, 0, 0, 0), this.transform);
+                        temp.GetComponent<MedPack>().medPackSpawner = this;
+                        medPacksSpawned++;
+                        cooldown = 60;
+                    }
                 }
             }
+            cooldown -= Time.deltaTime;
         }
-        cooldown -= Time.deltaTime;
     }
 
     void OnDrawGizmosSelected()

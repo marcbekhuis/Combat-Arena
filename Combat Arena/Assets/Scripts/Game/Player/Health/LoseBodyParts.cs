@@ -30,43 +30,46 @@ public class LoseBodyParts : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (Combat != null && Combat.combat)
+        if (!PauseMenuToggle.paused && !HealthScript.gameEnd)
         {
-            if (collision.transform.parent == healthscript.transform || collision.transform == healthscript.transform)
+            if (Combat != null && Combat.combat)
             {
-                if (collision.gameObject.name == "LeftArm" || collision.gameObject.name == "RightArm")
+                if (collision.transform.parent == healthscript.transform || collision.transform == healthscript.transform)
                 {
-                    Rigidbody bodyPartRB;
-                    if ((bodyPartRB = collision.gameObject.GetComponent<Rigidbody>()) != null)
+                    if (collision.gameObject.name == "LeftArm" || collision.gameObject.name == "RightArm")
                     {
-                        Bodypart bodypartEnemy = collision.gameObject.GetComponent<Bodypart>();
-                        if (bodypartEnemy.health - bodypartSelf.damage <= 0)
+                        Rigidbody bodyPartRB;
+                        if ((bodyPartRB = collision.gameObject.GetComponent<Rigidbody>()) != null)
                         {
-                            bodyPartRB.constraints = RigidbodyConstraints.None;
-                            PlayerCombat temp;
-                            if ((temp = bodyPartRB.transform.GetComponentInParent<PlayerCombat>()) != null)
+                            Bodypart bodypartEnemy = collision.gameObject.GetComponent<Bodypart>();
+                            if (bodypartEnemy.health - bodypartSelf.damage <= 0)
                             {
-                                if (temp.rightArm == bodyPartRB)
+                                bodyPartRB.constraints = RigidbodyConstraints.None;
+                                PlayerCombat temp;
+                                if ((temp = bodyPartRB.transform.GetComponentInParent<PlayerCombat>()) != null)
                                 {
-                                    temp.rightArm = null;
+                                    if (temp.rightArm == bodyPartRB)
+                                    {
+                                        temp.rightArm = null;
+                                    }
+                                    else if (temp.leftArm == bodyPartRB)
+                                    {
+                                        temp.leftArm = null;
+                                    }
                                 }
-                                else if (temp.leftArm == bodyPartRB)
-                                {
-                                    temp.leftArm = null;
-                                }
+                                source.PlayOneShot(punch);
+                                bodyPartRB.gameObject.transform.parent = null;
+                                bodypartEnemy.health -= bodypartSelf.damage;
                             }
-                            source.PlayOneShot(punch);
-                            bodyPartRB.gameObject.transform.parent = null;
-                            bodypartEnemy.health -= bodypartSelf.damage;
-                        }
-                        else
-                        {
-                            bodypartEnemy.health -= bodypartSelf.damage;
+                            else
+                            {
+                                bodypartEnemy.health -= bodypartSelf.damage;
+                            }
                         }
                     }
+                    healthscript.healthlose(bodypartSelf.damage);
+                    punchSource.Play();
                 }
-                healthscript.healthlose(bodypartSelf.damage);
-                punchSource.Play();
             }
         }
     }
